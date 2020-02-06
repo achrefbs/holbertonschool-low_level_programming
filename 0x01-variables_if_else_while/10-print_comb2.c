@@ -5,8 +5,7 @@
  */
 int main(void)
 {
-char fd, sd;
-char s[100];
+int fd, sd;
 for (fd = 48; fd <= 57; fd++)
 {
 for (sd = 48; sd <= 57; sd++)
