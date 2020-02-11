@@ -11,12 +11,12 @@ if (x < 0)
 x *= -1;
 x = x % 10;
 _putchar(x + '0');
-return (x);
+return ((x % 10) + '0');
 }
 else
 {
 x = x % 10;
 _putchar(x + '0');
-return (x);
+return ((x % 10) * -1);
 }
 }
