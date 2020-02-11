@@ -2,12 +2,22 @@
 #include <math.h>
 /**
  *print_last_digit - prints last digit
- *@i : integer
+ *@x : integer
  *Return: 0
  */
-int print_last_digit(int i)
+int print_last_digit(int x)
 {
-int x;
-x = i % 10;
+if (x < 0)
+{
+x = -x;
+x = x % 10;
+_putchar(x + '0');
 return (x);
+}
+else
+{
+x = x % 10;
+_putchar(x + '0');
+return (x);
+}
 }
