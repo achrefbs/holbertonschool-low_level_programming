@@ -3,7 +3,7 @@
  *main - prints the sum of muliples of 5 or 3
  *Return: 0
  */
-void main(void)
+int main(void)
 {
 int x3, x5, i;
 long int s1, s2, s;
@@ -19,4 +19,5 @@ s2 = s2 + x5;
 }
 s = s1 + s2;
 printf("%ld\n", s);
+return (0);
 }
