@@ -5,7 +5,8 @@
  */
 void main(void)
 {
-int x3, x5, i, s1, s2, s;
+int x3, x5, i;
+long int s1, s2, s;
 for (i = 1; i * 3 < 1024; i++)
 {
 x3 = i * 3;
@@ -17,5 +18,5 @@ x5 = i * 5;
 s2 = s2 + x5;
 }
 s = s1 + s2;
-printf("%d", s);
+printf("%ld\n", s);
 }
