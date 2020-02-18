@@ -11,19 +11,18 @@ for (i = 0; str[i] != '\0'; i++)
 {
 c++;
 }
-if (c % 2 == 0)
+if ((c % 2) == 0)
 {
-for (i = c / 2; i <= c; i++)
-{
-_putchar(str[i]);
+    i = i /2 ;
 }
-}
-else
+else 
 {
-for (i = (c - 1) / 2 ; i < c - 1 ; i++)
-{
-_putchar(str[i]);
+    i = i +1 /2;
 }
+while(*(str +i))
+{
+    _putchar(str[i]);
+    i++;
 }
 _putchar('\n');
 }
