@@ -13,16 +13,16 @@ c++;
 }
 if ((c % 2) == 0)
 {
-    i = i /2 ;
+i = i / 2;
 }
-else 
+else
 {
-    i = i +1 /2;
+i = i + 1 / 2;
 }
-while(*(str +i))
+while (*(str + i))
 {
-    _putchar(str[i]);
-    i++;
+_putchar(str[i]);
+i++;
 }
 _putchar('\n');
 }
