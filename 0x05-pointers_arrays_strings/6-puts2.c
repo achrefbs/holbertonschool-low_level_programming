@@ -1,7 +1,7 @@
 #include"holberton.h"
 /**
- * main - check the code for Holberton School students.
- *
+ * puts2 - puts every other charachter
+ *@str : string
  * Return: Always 0.
  */
 void puts2(char *str)
@@ -11,7 +11,7 @@ for (i = 0; str[i] != '\0'; i++)
 {
 if ((i % 2) == 0)
 {
-    _putchar(str[i]);
+_putchar(str[i]);
 }
 }
 _putchar('\n');
