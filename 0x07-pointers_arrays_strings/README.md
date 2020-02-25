@@ -5,3 +5,4 @@
 4 - a function that searches a string for any of a set of bytes.
 5 - a function that locates a substring.
 6 - a function that prints the chessboard.
+8 - a function that sets the value of a pointer to a char.
