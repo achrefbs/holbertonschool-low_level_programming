@@ -2,14 +2,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- **_strdup - a function that creates an array of chars.
- *@str : array of char
+ **str_concat - a function that concatenates two strings.
+ *@s1 : array of char
+ *@s2 : array of char
  *Return: array
  */
 char *str_concat(char *s1, char *s2)
 {
 	int l1, i, j;
 	char *s;
+
+	if (s1 == NULL)
+	s1 = "";
+	if (s2 == NULL)
+	s2 = "";
 	s = malloc(sizeof(s1) + sizeof(s2));
 	if (s == NULL)
 	return (NULL);
@@ -23,9 +29,5 @@ char *str_concat(char *s1, char *s2)
 	{
 		s[j] = s2[j - l1];
 	}
-	return(s);
-	
-	
-	
-	
+	return (s);
 }
