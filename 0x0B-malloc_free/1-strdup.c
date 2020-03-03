@@ -20,6 +20,7 @@ char *_strdup(char *str)
 	{
 		cpystr[i] = str[i];
 	}
+	cpystr[i + 1] = '\0';
 	return (cpystr);
 	free(cpystr);
 }
