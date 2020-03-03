@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- **create_array - a function that creates an array of chars.
+ **create_array - a function that returns a pointer to a copy of the string.
  *@size : size of array
  *@c : char
  *Return: array
