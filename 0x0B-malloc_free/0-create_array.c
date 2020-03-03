@@ -1,6 +1,12 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ **create_array - a function that creates an array of chars.
+ *@size : size of array
+ *@c : char
+ *Return: array
+ */
 char *create_array(unsigned int size, char c)
 {
 	unsigned int i;
@@ -14,10 +20,14 @@ char *create_array(unsigned int size, char c)
 		str = malloc(sizeof(char) * size);
 		if (str == NULL)
 		return (NULL);
-		for (i = 0; i < size; i++)
+		else
+		{
+			for (i = 0; i < size; i++)
 			{
 				str[i] = c;
 			}
+		}
 		return (str);
+		free(str);
 	}
 }
