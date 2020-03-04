@@ -8,7 +8,7 @@
  */
 char *_strdup(char *str)
 {
-	int i, l;
+	int i = 0, l;
 	char *cpystr;
 
 	for (l = 0; str[l] != '\0'; l++)
@@ -18,9 +18,10 @@ char *_strdup(char *str)
 	cpystr = malloc(sizeof(char) * l + 1);
 	if (cpystr == NULL)
 	return (NULL);
-	for (i = 0; i <= l; i++)
+	while (i <= l)
 	{
 		cpystr[i] = str[i];
+		i++;
 	}
 	return (cpystr);
 }
