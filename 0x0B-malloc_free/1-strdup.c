@@ -22,6 +22,6 @@ char *_strdup(char *str)
 	{
 		cpystr[i] = str[i];
 	}
-	cpystr[i] = '\0';
+	cpystr[i + 1] = '\0';
 	return (cpystr);
 }
