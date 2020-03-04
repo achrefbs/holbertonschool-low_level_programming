@@ -18,10 +18,10 @@ char *_strdup(char *str)
 	cpystr = malloc(sizeof(char) * l + 1);
 	if (cpystr == NULL)
 	return (NULL);
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; i <= l; i++)
 	{
 		cpystr[i] = str[i];
 	}
-	cpystr[i + 1] = '\0';
+	cpystr[i] = '\0';
 	return (cpystr);
 }
