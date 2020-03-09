@@ -7,12 +7,6 @@
  *@owner : string
  *Description: a new type that contains dog name, age, and owner.
  */
-struct dog
-{
-	char *name;
-	float age;
-	char *owner;
-};
 typedef struct dog
 {
 	char *name;
