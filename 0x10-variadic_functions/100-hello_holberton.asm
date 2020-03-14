@@ -13,4 +13,4 @@ start:
   syscall
 
 message:
-  db "Hello, Holberton", 10
+  db "Hello, Holberton", 17
