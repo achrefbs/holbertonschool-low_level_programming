@@ -7,10 +7,10 @@
  * @len : length of the string
  * @next : pointer to next
  */
-typedef struct list
+typedef struct list_s
 {
 	char *str;
-	int len;
+	unsigned int len;
 	struct list *next;
 } list_t;
 size_t print_list(const list_t *h);
