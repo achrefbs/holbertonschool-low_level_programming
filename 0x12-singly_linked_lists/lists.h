@@ -2,7 +2,7 @@
 #define LISTS_H
 #include <stddef.h>
 /**
- * struct list - singly linked list
+ * struct list_s - singly linked list
  * @str : pointer to a string
  * @len : length of the string
  * @next : pointer to next
