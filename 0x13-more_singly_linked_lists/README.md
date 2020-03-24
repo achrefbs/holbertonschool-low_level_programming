@@ -5,3 +5,4 @@
 4 - a function that frees a listint_t list.
 5 - a function that frees a listint_t list & sets the head to NULL.
 6 - a function that deletes the head node of a listint_t linked list, and returns the head node’s data (n).
+7 - a function that returns the nth node of a listint_t linked list.
