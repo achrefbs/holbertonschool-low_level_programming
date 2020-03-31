@@ -27,6 +27,7 @@ int main(int ac, char *av[])
 	if (cw == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
 	}
 
 	fd2 = open(av[2],O_WRONLY | O_TRUNC | O_CREAT, 00664);
@@ -40,6 +41,7 @@ int main(int ac, char *av[])
 	if (cw2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
+		exit(100);
 	}
 	free(buff);
 	return (0);
