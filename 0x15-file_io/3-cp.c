@@ -8,7 +8,7 @@ int main(int ac, char *av[])
 {
 	int fd ,rw, cw, l;
 	int fd2, ww, cw2;
-	char *buff = malloc(sizeof(char) * 1024);
+	char buff[1024];
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -43,6 +43,5 @@ int main(int ac, char *av[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
-	free(buff);
 	return (0);
 }
