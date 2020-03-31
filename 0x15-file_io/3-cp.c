@@ -4,17 +4,24 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
+/**
+ * main - copies the content of a file to another file.
+ * @ac : argc
+ * @av : argv
+ * Return: 0
+ */
 int main(int ac, char *av[])
 {
-	int fd ,rw, cw, l;
+	int fd, rw, cw, l;
 	int fd2, ww, cw2;
-	char buff[1024];
+	char *buff = malloc(sizeof(char) * 1024);
+
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	fd = open(av[1],O_RDONLY);
+	fd = open(av[1], O_RDONLY);
 	rw = read(fd, buff, 1024);
 	if (fd == -1 || rw == -1)
 	{
@@ -30,7 +37,7 @@ int main(int ac, char *av[])
 		exit(100);
 	}
 
-	fd2 = open(av[2],O_WRONLY | O_TRUNC | O_CREAT, 00664);
+	fd2 = open(av[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	ww = write(fd2, buff, l);
 	if (fd2 == -1 || ww == -1)
 	{
@@ -43,5 +50,6 @@ int main(int ac, char *av[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
+	free(buff);
 	return (0);
 }
