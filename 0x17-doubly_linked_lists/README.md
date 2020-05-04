@@ -7,3 +7,5 @@
 6 - a function that returns the sum of all the data (n) of a dlistint_t linked list.
 7 - a function that inserts a new node at a given position.
 8 - a function that deletes the node at index index of a dlistint_t linked list.
+9 - the password for crackme4.
+10 - the largest palindrome made from the product of two 3-digit numbers.
