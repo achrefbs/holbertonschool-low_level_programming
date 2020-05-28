@@ -5,3 +5,8 @@
 
 # 1. djb2
 * a hash function implementing the djb2 algorithm.
+
+# 2. key -> index
+* a function that gives you the index of a key.
+* this function should use the hash_djb2 function.
+* Returns the index at which the key/value pair should be stored in the array of the hash table
