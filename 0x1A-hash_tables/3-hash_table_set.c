@@ -4,19 +4,19 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
     unsigned long int idx;
-    hash_node_t *node, *tmp;
+    hash_node_t *node;
     if (key == NULL)
         return 0;
     idx = key_index((const unsigned char *)key, ht->size);
 
-    tmp = ht->array[idx];
-    if(tmp)
+    
+    if(ht->array[idx])
     {
-        if (strcmp(tmp->key, key) == 0)
-            tmp = tmp->next;
-        if (strcmp(tmp->key, key) == 0)
+        if (strcmp(ht->array[idx]->key, key) != 0)
+            ht->array[idx] = ht->array[idx]->next;
+        if (strcmp(ht->array[idx]->key, key) == 0)
         {
-            tmp->value = strdup(value);
+            ht->array[idx]->value = strdup(value);
             return 1;
         }
         return 1;
