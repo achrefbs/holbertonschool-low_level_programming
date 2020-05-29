@@ -12,7 +12,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     if (ht->array[idx])
     while(ht->array[idx])
     {
-        if (strcmp(ht->array[idx]->key, key) == 0)
+        if (ht->array[idx] && strcmp(ht->array[idx]->key, key) == 0)
         {
             free(ht->array[idx]->value);
             ht->array[idx]->value = strdup(value);
@@ -20,6 +20,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
                 return 0;
             return 1;
         }
+        if (ht->array[idx])
         ht->array[idx] = ht->array[idx]->next;
     }
 
