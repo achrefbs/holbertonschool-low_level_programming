@@ -12,13 +12,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     
     while(ht->array[idx])
     {
-        if (strcmp(ht->array[idx]->key, key) != 0)
-            ht->array[idx] = ht->array[idx]->next;
         if (strcmp(ht->array[idx]->key, key) == 0)
         {
+            free(ht->array[idx]->value);
             ht->array[idx]->value = strdup(value);
+            if (ht->array[idx]->value == NULL)
+                return 0;
             return 1;
         }
+        ht->array[idx] = ht->array[idx]->next;
     }
     node = malloc(sizeof(hash_node_t));
     if (node == NULL)
