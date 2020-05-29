@@ -19,3 +19,6 @@ a function that retrieves a value associated with a key.
 
 # 5
 a function that prints a hash table.
+
+# 6
+a function that deletes a hash table.
