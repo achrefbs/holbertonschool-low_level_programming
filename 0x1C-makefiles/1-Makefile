@@ -1,6 +1,4 @@
-all: holberton
 CC	= gcc
-SRC	= $(wildcard *.c)
-
-holberton:
+SRC	= $(wildcard *.c)*
+all:
 	$(CC) $(SRC) -o holberton
